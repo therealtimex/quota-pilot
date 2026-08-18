@@ -26,7 +26,7 @@ function printHelp() {
   console.log(`quota-pilot — check live Claude/Codex CLI usage and ask an agent what to use next
 
 Usage:
-  npx quota-pilot ["task description"]
+  npx @realtimex/quota-pilot ["task description"]
 
 Options:
   --via <codex|claude>   Which CLI to ask for the recommendation (default: codex)
@@ -43,10 +43,10 @@ unless your task text mentions "spark" — it's a cheap/fast lane that's easy
 to over-recommend just because it usually has full quota.
 
 Examples:
-  npx quota-pilot
-  npx quota-pilot "refactor the auth middleware across 6 files, will take a while"
-  npx quota-pilot --via claude "quick one-line fix in a config file"
-  npx quota-pilot --json
+  npx @realtimex/quota-pilot
+  npx @realtimex/quota-pilot "refactor the auth middleware across 6 files, will take a while"
+  npx @realtimex/quota-pilot --via claude "quick one-line fix in a config file"
+  npx @realtimex/quota-pilot --json
 `);
 }
 

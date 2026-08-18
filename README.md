@@ -5,10 +5,10 @@ agent (not a hardcoded rule) which one you should use — optionally for a
 specific task you describe.
 
 ```
-npx quota-pilot
-npx quota-pilot "refactor the auth middleware across 6 files, will take a while"
-npx quota-pilot --via claude "quick one-line fix in a config file"
-npx quota-pilot --json
+npx @realtimex/quota-pilot
+npx @realtimex/quota-pilot "refactor the auth middleware across 6 files, will take a while"
+npx @realtimex/quota-pilot --via claude "quick one-line fix in a config file"
+npx @realtimex/quota-pilot --json
 ```
 
 ## How it gets the data
@@ -101,7 +101,5 @@ git push --follow-tags
 
 The workflow checks the pushed tag matches `package.json`'s version before
 publishing, then runs `npm publish --access public --provenance`. Once
-published, `npx quota-pilot` resolves to it automatically — no separate step
+published, `npx @realtimex/quota-pilot` resolves to it automatically — no separate step
 needed for npx itself.
-# quota-pilot
-# quota-pilot
