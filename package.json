@@ -1,6 +1,6 @@
 {
   "name": "@realtimex/quota-pilot",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Reads live Claude and Codex CLI subscription usage and asks an agent which one to use for your task.",
   "type": "module",
   "bin": {
