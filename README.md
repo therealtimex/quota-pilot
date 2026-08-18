@@ -83,5 +83,25 @@ short-task/long-task routing guide, not just a data dump.
 - `codex` and/or `claude` CLIs installed and already logged in
 - Zero npm dependencies — everything uses Node's stdlib plus the two CLIs
   and Python's stdlib.
+
+## Publishing
+
+`.github/workflows/publish.yml` publishes to npm on a version tag push (or
+via manual "Run workflow" in the Actions tab). It reads an npm access token
+from the repo secret `NPM_TOKEN` — add one under GitHub repo Settings →
+Secrets and variables → Actions → New repository secret, using an npm
+[automation/publish token](https://docs.npmjs.com/creating-and-viewing-access-tokens).
+
+To ship a release:
+
+```
+npm version patch   # or minor / major — bumps package.json and tags it
+git push --follow-tags
+```
+
+The workflow checks the pushed tag matches `package.json`'s version before
+publishing, then runs `npm publish --access public --provenance`. Once
+published, `npx quota-pilot` resolves to it automatically — no separate step
+needed for npx itself.
 # quota-pilot
 # quota-pilot
